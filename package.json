@@ -1,0 +1,61 @@
+{
+  "name": "@tablecharts/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for TableCharts — turn tables (CSV, JSON, Notion, Google Sheets, Salesforce) into shareable interactive dashboards from Claude, Cursor, and any MCP client.",
+  "type": "module",
+  "bin": {
+    "tablecharts-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tablecharts",
+    "charts",
+    "dashboard",
+    "notion",
+    "google-sheets",
+    "salesforce",
+    "csv",
+    "data-visualization",
+    "claude",
+    "cursor"
+  ],
+  "author": "TableCharts",
+  "license": "MIT",
+  "homepage": "https://tablecharts.co",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Browncabinet/tablecharts-wiz.git",
+    "directory": "mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/Browncabinet/tablecharts-wiz/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  }
+}
