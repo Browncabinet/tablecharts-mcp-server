@@ -1,4 +1,18 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/server.json",
-  "maintainers": ["Browncabinet"]
+  "maintainers": ["Browncabinet"],
+  "displayName": "TableCharts",
+  "description": "Turn tables (CSV, JSON, Notion, Google Sheets, Salesforce) into shareable interactive dashboards from Claude, Cursor, and any MCP client.",
+  "homepage": "https://tablecharts.co",
+  "license": "MIT",
+  "categories": ["data", "visualization", "productivity"],
+  "tools": ["generate_dashboard", "list_chart_types"],
+  "env": [
+    { "name": "TABLECHARTS_API_KEY", "description": "API key from tablecharts.co", "required": true },
+    { "name": "TABLECHARTS_API_BASE", "description": "Override API base URL (optional)", "required": false }
+  ],
+  "install": {
+    "npm": "npm i -g @tablecharts/mcp-server",
+    "npx": "npx -y @tablecharts/mcp-server"
+  }
 }

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.browncabinet/tablecharts-mcp-server",
+  "title": "TableCharts",
+  "description": "Turn JSON, CSV, or URLs (Notion, Google Sheets, Salesforce) into beautiful hosted interactive dashboards.",
+  "version": "0.1.3",
+  "repository": {
+    "url": "https://github.com/Browncabinet/tablecharts-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://tablecharts.co",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/logo.png",
+      "mimeType": "image/png",
+      "sizes": "500x500"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@tablecharts/mcp-server",
+      "version": "0.1.3",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "TABLECHARTS_API_KEY",
+          "description": "Your TableCharts API key from tablecharts.co (starts with tc_live_...)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "TABLECHARTS_API_BASE",
+          "description": "Optional base URL for the TableCharts API",
+          "isRequired": false,
+          "default": "https://tablecharts.co"
+        }
+      ]
+    }
+  ]
+}

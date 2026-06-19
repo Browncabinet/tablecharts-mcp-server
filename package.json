@@ -13,8 +13,7 @@
     "LICENSE"
   ],
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "scripts": {
     "build": "tsc",
@@ -41,11 +40,10 @@
   "homepage": "https://tablecharts.co",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Browncabinet/tablecharts-wiz.git",
-    "directory": "mcp-server"
+    "url": "git+https://github.com/Browncabinet/tablecharts-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/Browncabinet/tablecharts-wiz/issues"
+    "url": "https://github.com/Browncabinet/tablecharts-mcp-server/issues"
   },
   "engines": {
     "node": ">=18"
