@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2026-06-19
+
+### Fixed
+- Republish with `server.json`, `CHANGELOG.md`, `Dockerfile`, and `assets/` (logo + 3 chart screenshots) actually included in the published tarball. Versions 0.1.1–0.1.3 were tagged but never reached npm.
+
+
 ## [0.1.3] - 2026-06-19
 
 ### Added
