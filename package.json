@@ -1,6 +1,6 @@
 {
   "name": "@tablecharts/mcp-server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP server for TableCharts — turn tables (CSV, JSON, Notion, Google Sheets, Salesforce) into shareable interactive dashboards from Claude, Cursor, and any MCP client.",
   "type": "module",
   "bin": {
