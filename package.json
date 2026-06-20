@@ -6,11 +6,17 @@
   "bin": {
     "tablecharts-mcp": "dist/index.js"
   },
-  "main": "dist/index.js",
-  "files": [
+  "main": "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md",
+    "server.json",
+    "glama.json",
+    "Dockerfile",
+    "assets"
+  ],
+  ],
   ],
   "publishConfig": {
     "access": "public"
