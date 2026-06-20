@@ -1,21 +1,22 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-## [0.1.5] - 2026-06-20
-### Changed
-- Expanded published tarball to include CHANGELOG.md, server.json, glama.json, Dockerfile, and assets/ for better Glama.ai grading.
 
-## [0.1.4] - 2026-06-19
+## [0.1.6] - 2026-06-20
 
 ### Fixed
-- Republish with `server.json`, `CHANGELOG.md`, `Dockerfile`, and `assets/` (logo + 3 chart screenshots) actually included in the published tarball. Versions 0.1.1–0.1.3 were tagged but never reached npm.
+- Actually include `CHANGELOG.md`, `server.json`, `glama.json`, `Dockerfile`, and `assets/` in the published npm tarball (the `files` array was not updated when 0.1.5 shipped).
+- Repair malformed `package.json` that blocked the 0.1.6 publish.
 
+## [0.1.5] - 2026-06-20
+
+### Changed
+- Expanded published tarball `files` to include `server.json`, `glama.json`, `CHANGELOG.md`, `Dockerfile`, and `assets/` so Glama and registry consumers receive the full metadata bundle.
 
 ## [0.1.3] - 2026-06-19
 
 ### Added
 - Three example chart screenshots (bar, line, donut) in `assets/` and surfaced via `glama.json` `screenshots` and the README Examples section, so the Glama listing and GitHub repo show real previews.
-
 
 ## [0.1.2] - 2026-06-19
 

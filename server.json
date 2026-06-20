@@ -3,7 +3,7 @@
   "name": "io.github.browncabinet/tablecharts-mcp-server",
   "title": "TableCharts",
   "description": "Turn JSON, CSV, or URLs (Notion, Google Sheets, Salesforce) into beautiful hosted interactive dashboards.",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "repository": {
     "url": "https://github.com/Browncabinet/tablecharts-mcp-server",
     "source": "github"
@@ -20,7 +20,7 @@
     {
       "registryType": "npm",
       "identifier": "@tablecharts/mcp-server",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "transport": { "type": "stdio" },
       "environmentVariables": [
         {
