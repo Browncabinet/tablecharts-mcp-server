@@ -1,6 +1,9 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [0.1.5] - 2026-06-20
+### Changed
+- Expanded published tarball to include CHANGELOG.md, server.json, glama.json, Dockerfile, and assets/ for better Glama.ai grading.
 
 ## [0.1.4] - 2026-06-19
 
