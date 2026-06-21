@@ -14,5 +14,7 @@
   "install": {
     "npm": "npm i -g @tablecharts/mcp-server",
     "npx": "npx -y @tablecharts/mcp-server"
-  }
-}
+  }, "icon": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/logo.png" 
+
+
+
