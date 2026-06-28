@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/logo.png" alt="TableCharts logo" width="128" height="128" />
+</p>
 # @tablecharts/mcp-server
 
 [![npm](https://img.shields.io/npm/v/@tablecharts/mcp-server.svg)](https://www.npmjs.com/package/@tablecharts/mcp-server)
