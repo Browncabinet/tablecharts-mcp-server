@@ -1,20 +1,48 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/server.json",
-  "maintainers": ["Browncabinet"],
+  "name": "TableCharts MCP Server",
   "displayName": "TableCharts",
-  "description": "Turn tables (CSV, JSON, Notion, Google Sheets, Salesforce) into shareable interactive dashboards from Claude, Cursor, and any MCP client.",
+  "description": "Turn JSON, CSV, Notion databases, Google Sheets, and Salesforce reports into beautiful hosted interactive dashboards and charts. Auto-recommends the best chart type, supports live embeds, and ships with stdio + Streamable HTTP transports — drop-in ready for Claude Desktop, Cursor, VS Code, ChatGPT, and Gemini Enterprise agents.",
+  "categories": ["data", "visualization", "charts", "productivity", "analytics"],
+  "keywords": ["charts", "dashboards", "data-visualization", "notion", "google-sheets", "salesforce", "csv", "analytics", "bi", "gemini", "claude"],
+  "maintainers": ["Browncabinet"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Browncabinet/tablecharts-mcp-server"
+  },
   "homepage": "https://tablecharts.co",
+  "documentation": "https://tablecharts.co/gemini-enterprise",
   "license": "MIT",
-  "categories": ["data", "visualization", "productivity"],
-  "tools": ["generate_dashboard", "list_chart_types"],
-  "env": [
-    { "name": "TABLECHARTS_API_KEY", "description": "API key from tablecharts.co", "required": true },
-    { "name": "TABLECHARTS_API_BASE", "description": "Override API base URL (optional)", "required": false }
+  "icon": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/logo.png",
+  "screenshots": [
+    { "url": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/screenshots/01-bar.png", "caption": "Bar chart — Sales by Region, from a Google Sheet" },
+    { "url": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/screenshots/02-line.png", "caption": "Line chart — Weekly Active Users, from a Notion database" },
+    { "url": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/screenshots/03-pie.png", "caption": "Donut chart — Revenue Mix by Product, from a Salesforce report" },
+    { "url": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/screenshots/04-radar.png", "caption": "Radar chart — multi-metric Product Score from a CSV upload" }
   ],
-  "install": {
-    "npm": "npm i -g @tablecharts/mcp-server",
-    "npx": "npx -y @tablecharts/mcp-server"
-  }, "icon": "https://raw.githubusercontent.com/Browncabinet/tablecharts-mcp-server/main/assets/logo.png" 
-
-
-
+  "env": {
+    "type": "object",
+    "properties": {
+      "TABLECHARTS_API_KEY": {
+        "type": "string",
+        "description": "Your TableCharts API key from tablecharts.co (starts with tc_live_...)"
+      },
+      "TABLECHARTS_API_BASE": {
+        "type": "string",
+        "description": "Optional base URL for the TableCharts API",
+        "default": "https://tablecharts.co"
+      },
+      "PORT": {
+        "type": "string",
+        "description": "Optional HTTP port to enable Streamable HTTP transport (e.g. 3000). Omit for stdio mode.",
+        "default": ""
+      },
+      "MCP_TRANSPORT": {
+        "type": "string",
+        "description": "Force transport: 'stdio' (default for local clients) or 'http' (for Gemini Enterprise / remote).",
+        "default": "stdio"
+      }
+    },
+    "required": ["TABLECHARTS_API_KEY"]
+  }
+}
